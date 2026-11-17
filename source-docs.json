@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/orchpact/orchpact",
-  "commit": "04e9a81dbcab16b47c89554258ad024f36772fec",
-  "committed_at": "2026-11-17T20:40:53+08:00",
+  "commit": "a5e26dce75a8b6505b69ed3471a16708f5e933e8",
+  "committed_at": "2026-11-17T21:43:54+08:00",
   "documents": [
     {
       "source": "docs/GETTING_STARTED.md",
@@ -81,7 +81,7 @@
     {
       "source": "docs/REPOSITORIES.md",
       "file": "content/reference/repositories.md",
-      "sha256": "304e732d96c8b819b91d5b66d7259bd5da4c35d22505f71c727af43feda1b7a8"
+      "sha256": "65e1a3cf742877686c680213f981ca7c78140023c7297957300406d47f4d139d"
     },
     {
       "source": "CONTRIBUTING.md",
