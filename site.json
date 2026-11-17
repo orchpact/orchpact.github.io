@@ -1,0 +1,8 @@
+{
+  "name": "Orchpact",
+  "chinese_name": "序契",
+  "url": "https://orchpact.github.io",
+  "source_repository": "https://github.com/orchpact/orchpact",
+  "website_repository": "https://github.com/orchpact/orchpact.github.io",
+  "description": "开源、可自托管的组织协作工作流引擎。可移植声明、CrewAI 团队执行、交付契约与持久化事实。"
+}

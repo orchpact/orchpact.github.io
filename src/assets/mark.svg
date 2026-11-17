@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title description">
+<title id="title">Orchpact · 序契</title>
+<desc id="description">Two interlocking workflow tracks form an O-shaped pact seal.</desc>
+<rect width="96" height="96" rx="21" fill="#173D32"/>
+<g fill="none" stroke-width="12" stroke-linejoin="round">
+<path stroke="#F4F4EC" d="M57 21H36L21 36V60L36 75H48V54H39"/>
+<path stroke="#D4E7A3" d="M39 75H60L75 60V36L60 21H48V42H57"/>
+</g>
+</svg>

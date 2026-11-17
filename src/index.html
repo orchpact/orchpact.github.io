@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f4ec">
+<meta name="description" content="Orchpact（序契）是开源、可自托管的组织协作工作流引擎。用可移植声明定义团队、依赖和交付契约，由 CrewAI 执行团队协作，平台管理权限、预算、回执、验收与恢复。">
+<meta property="og:title" content="Orchpact · 定义协作的结构，守住执行的边界">
+<meta property="og:description" content="可移植的工作流声明、独立的 CrewAI 执行团队、可核验的交付与持久化事实。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://orchpact.github.io/">
+<link rel="canonical" href="https://orchpact.github.io/">
+<link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/home.js" defer></script>
+<title>Orchpact · 序契 · 声明协作，按约交付</title>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">跳到正文</a>
+<div class="reading-progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="header-inner wrap">
+    <a class="brand" href="/" aria-label="Orchpact 首页"><img src="/assets/orchpact-logo.svg" width="145" height="34" alt="Orchpact"></a>
+    <nav class="desktop-nav" aria-label="主导航"><a href="#architecture">架构</a><a href="#definition">工作流协议</a><a href="#execution">执行过程</a><a href="/docs/">文档</a></nav>
+    <a class="source-link" href="https://github.com/orchpact/orchpact"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 18c-4 1-4-2-6-2m12 5v-4a3.5 3.5 0 0 0-1-2.7c3.3-.4 6.7-1.6 6.7-7.3a5.7 5.7 0 0 0-1.5-4c.2-.9.1-2-.4-3-1.3 0-2.5.5-3.5 1.3a13 13 0 0 0-6.6 0C7.7.5 6.5 0 5.2 0c-.5 1-.6 2.1-.4 3a5.7 5.7 0 0 0-1.5 4c0 5.7 3.4 6.9 6.7 7.3A3.5 3.5 0 0 0 9 17v4" transform="translate(1 1) scale(.91)" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>GitHub</span><span aria-hidden="true">↗</span></a>
+    <details class="mobile-nav"><summary>目录 <span aria-hidden="true">＋</span></summary><nav aria-label="移动主导航"><a href="#architecture">系统架构</a><a href="#definition">工作流协议</a><a href="#execution">执行过程</a><a href="#deployment">部署模型</a><a href="/docs/">使用文档 ↗</a></nav></details>
+  </div>
+</header>
+<main id="main">
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="status-dot"></span> ORCHPACT <span lang="en" aria-label="Pronounced ORK-pakt">/ˈɔːrk.pækt/</span> / 序契</p>
+      <p class="hero-category">开源、可自托管的组织协作工作流引擎</p>
+      <h1 id="hero-title">定义协作的结构，<br>守住执行的<span>边界。</span></h1>
+      <p class="hero-lede">将团队、依赖与交付契约写成可复用的声明。<br class="wide-only">由 CrewAI 执行团队内部协作，让每次行动经过授权，<br class="wide-only">每份交付有据可验，每次运行保留独立的事实。</p>
+      <div class="hero-actions"><a class="button button-primary" href="#architecture">深入系统架构 <span aria-hidden="true">↘</span></a><a class="quiet-link" href="/docs/quickstart/">开始构建工作流 <span aria-hidden="true">→</span></a></div>
+      <div class="hero-stack"><span>MIT LICENSE</span><span>PYTHON</span><span>POSTGRESQL</span><span>CREWAI</span></div>
+    </div>
+    <figure class="architecture-plate" aria-labelledby="plate-caption">
+      <div class="plate-top"><span class="mono">THE EXECUTION MODEL</span><span class="plate-id">FIG. 01</span></div>
+      <div class="definition-file"><span class="file-icon" aria-hidden="true">{ }</span><div><strong>workflow.json</strong><small>职责 · 能力槽位 · 依赖 · 交付契约</small></div><span class="file-tag">声明</span></div>
+      <div class="plate-bridge"><span aria-hidden="true">↓</span><span>资源绑定 &amp; 执行快照</span></div>
+      <div class="runtime-frame">
+        <div class="runtime-label"><strong>Orchpact</strong><span>WORKFLOW RUNTIME</span></div>
+        <div class="crew-flow">
+          <div class="crew-box"><div class="crew-label"><span class="tiny-dot"></span> CrewAI <span>TEAM A</span></div><h3>分析团队</h3><div class="agent-chain"><span><i aria-hidden="true"></i>分析员</span><b aria-hidden="true">→</b><span><i aria-hidden="true"></i>编写员</span></div><p>Task context / 团队内交接</p></div>
+          <div class="artifact-link"><span class="link-line" aria-hidden="true">→</span><span class="artifact-token">{ result }</span><small>不可变产物</small></div>
+          <div class="crew-box review-crew"><div class="crew-label"><span class="tiny-dot"></span> CrewAI <span>TEAM B</span></div><h3>独立审校</h3><div class="agent-chain"><span><i aria-hidden="true"></i>审校员</span></div><p>Gate / 针对当前产物</p></div>
+        </div>
+        <div class="effect-boundary"><span class="mono">EFFECT BOUNDARY</span><span>权限 <b>·</b> 预算 <b>·</b> 预留 <b>·</b> 回执</span></div>
+      </div>
+      <div class="plate-persistence"><span>PostgreSQL <b>＋</b> 私有文件</span><span>状态 / 账务 / 产物 / 回执</span></div>
+      <figcaption id="plate-caption"><span>团队内传递上下文，团队间交接产物。</span><span class="mono">架构示意</span></figcaption>
+    </figure>
+    <div class="hero-margin-note" aria-hidden="true">A WORKFLOW IS A CONTRACT.</div>
+  </section>
+
+  <div class="principle-strip"><div class="wrap"><p>共享<span>定义</span></p><span class="strip-cross" aria-hidden="true">＋</span><p>独立<span>运行</span></p><span class="strip-cross" aria-hidden="true">＋</span><p>按约<span>交付</span></p><span class="strip-caption mono">ONE DEFINITION. EACH CONTEXT.</span></div></div>
+
+  <section class="section wrap architecture-section" id="architecture" aria-labelledby="architecture-title">
+    <div class="section-head"><div><p class="eyebrow">01 / THE ARCHITECTURE</p><h2 id="architecture-title">两层编排，<br>各自负责。</h2></div><p class="section-intro">业务阶段由 Orchpact 推进。团队内部的任务协作、工具选择和多轮行动交给 CrewAI。边界落在调用链和数据模型中。</p></div>
+    <div class="responsibility-grid">
+      <article class="workflow-responsibility"><div class="responsibility-heading"><span class="layer-number">01</span><div><span class="mono">WORKFLOW LAYER</span><h3>Orchpact</h3></div><span class="layer-caption">声明 / 治理 / 持久化</span></div><dl><div><dt>定义如何复用</dt><dd>不可覆盖的工作流修订、应用固定引用、Workspace 独立资源绑定。</dd></div><div><dt>阶段如何衔接</dt><dd>统一任务图、依赖领取、交付契约、独立审校与有界定向返工。</dd></div><div><dt>行动如何被接受</dt><dd>身份与能力检查、预算和积分预留、实际回执、结算及产物验收。</dd></div></dl><div class="layer-objects mono">run <span>/</span> work item <span>/</span> attempt <span>/</span> artifact</div></article>
+      <article class="crew-responsibility"><div class="responsibility-heading"><span class="layer-number">02</span><div><span class="mono">TEAM EXECUTION LAYER</span><h3>CrewAI</h3></div><span class="layer-caption">协作 / 行动 / 候选输出</span></div><dl><div><dt>装配本次团队</dt><dd>每次实际启动创建新的 Crew、Task 和参与岗位 Agent，运行对象不跨项目共享。</dd></div><div><dt>推进团队内部工作</dt><dd>按参与名单生成顺序 Tasks，通过 Task context 交接记录。</dd></div><div><dt>选择下一步行动</dt><dd>Agent 选择当前允许的工具，观察结果后继续，或返回契约要求的候选 JSON。</dd></div></dl><div class="layer-objects mono">Crew.kickoff() <span>/</span> BaseLLM <span>/</span> BaseTool</div></article>
+    </div>
+    <div class="boundary-note"><span class="boundary-symbol" aria-hidden="true">↳</span><p><strong>Crew 运行结束，仍须经过交付验收。</strong>模型与工具通过平台桥接器执行；团队完成状态不会自行授予权限、选择付款人或接受产物。</p><a class="arrow-link" href="/docs/execution/">阅读职责矩阵 <span aria-hidden="true">↗</span></a></div>
+  </section>
+
+  <section class="definition-section" id="definition" aria-labelledby="definition-title"><div class="wrap">
+    <div class="section-head"><div><p class="eyebrow">02 / THE PORTABLE CONTRACT</p><h2 id="definition-title">让工作流成为<br>可以分享的资产。</h2></div><p class="section-intro">声明描述协作结构与资源能力。使用方绑定自己的模型、身份和空间。工作流修订、应用引用与空间安装分别推进。</p></div>
+    <div class="definition-layout">
+      <div class="definition-story"><ol class="definition-lifecycle"><li><span>01</span><div><h3>发布定义</h3><p>保存作者版本、目录 revision 与定义指纹。</p><code>workflow_id + revision + SHA-256</code></div></li><li><span>02</span><div><h3>应用固定引用</h3><p>多个应用可引用同一修订，各自保留签名身份。</p><code>application binding revision</code></div></li><li><span>03</span><div><h3>空间安装资源</h3><p>模型能力槽位映射为本实例模型，安装显式确认。</p><code>Workspace + models bindings</code></div></li><li><span>04</span><div><h3>执行冻结快照</h3><p>保存当时的声明、岗位、模型、付款人与限制。</p><code>run → work item → attempt</code></div></li></ol><p class="definition-invariant">发布新定义不会自动移动应用引用，也不会改写已受理执行。</p><a class="arrow-link" href="/docs/workflows/">阅读工作流协议 <span aria-hidden="true">↗</span></a></div>
+      <div class="code-workbench"><div class="code-toolbar"><span class="mono">CONTRACT INSPECTOR</span><span class="code-light" aria-hidden="true"></span></div><div class="code-tabs" data-enhance hidden role="group" aria-label="查看声明与运行片段"><button type="button" data-contract="definition" aria-pressed="true">团队声明</button><button type="button" data-contract="binding" aria-pressed="false">资源绑定</button><button type="button" data-contract="snapshot" aria-pressed="false">运行记录</button></div><div class="code-file"><span id="contract-file">workflow.json · units[] 片段</span><span class="mono" id="contract-language">JSON</span></div><pre class="contract-code" tabindex="0" aria-label="声明或运行代码片段"><code id="contract-code">{
+  "key": "analysis",
+  "name": "分析团队",
+  "purpose": "核对记录并交付结果",
+  "model": "reasoning",
+  "crew": {
+    "process": "sequential",
+    "members": [
+      {
+        "key": "analyst",
+        "name": "分析员",
+        "role": "核对原始记录",
+        "instruction": "提交有依据的工作记录",
+        "capabilities": ["text", "json"]
+      },
+      {
+        "key": "writer",
+        "name": "编写员",
+        "role": "形成最终交付",
+        "instruction": "依据团队记录交付 result.json",
+        "capabilities": ["text", "json"]
+      }
+    ]
+  }
+}</code></pre><div class="code-caption"><p id="contract-caption">reasoning 是能力槽位。实际模型标识留在使用方绑定中。</p><button type="button" class="copy-small" data-copy="contract-code" data-enhance hidden>复制片段 <span aria-hidden="true">⧉</span></button></div><a class="code-source" href="https://github.com/orchpact/orchpact/blob/main/examples/workflows/department-review.json">查看包含审校与交付契约的完整示例 <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </div></section>
+
+  <section class="section wrap execution-section" id="execution" aria-labelledby="execution-title">
+    <div class="section-head"><div><p class="eyebrow">03 / FROM INTENT TO ACCEPTANCE</p><h2 id="execution-title">沿着一次执行，<br>看见每道边界。</h2></div><p class="section-intro">受理、快照、团队行动与产物验收，是不同的状态变更。逐步查看正常交付、审校返工和外部结果未知时，系统分别保留什么。</p></div>
+    <div class="runtime-lab" data-runtime-lab><div class="lab-toolbar"><div><span class="tiny-dot"></span><span class="mono">RUNTIME EXPLORER</span><span class="lab-disclaimer">本地机制示意 · 不调用模型</span></div><div class="scenario-tabs" data-enhance hidden role="group" aria-label="执行场景"><button type="button" data-scenario="normal" aria-pressed="true">正常交付</button><button type="button" data-scenario="repair" aria-pressed="false">审校返工</button><button type="button" data-scenario="unknown" aria-pressed="false">结果未知</button></div></div>
+      <div class="lab-body"><ol class="event-rail" id="event-rail" aria-label="执行事件"><li><span class="rail-fallback">01　身份与准入</span></li><li><span class="rail-fallback">02　冻结工作快照</span></li><li><span class="rail-fallback">03　启动执行团队</span></li><li><span class="rail-fallback">04　受控外部调用</span></li><li><span class="rail-fallback">05　登记当前产物</span></li><li><span class="rail-fallback">06　审校后接受交付</span></li></ol><div class="event-panel"><div class="event-meta"><span id="event-index" class="mono">EVENT 01 / 06</span><span id="event-badge" class="event-badge">ADMISSION</span></div><div class="event-copy" aria-live="polite" aria-atomic="true"><h3 id="event-title">先明确这是谁的委托。</h3><p id="event-description">在服务端校验应用签名、Workspace 成员身份、幂等键及输入契约；付款人来自发起委托的身份。</p></div><div class="event-record"><div><span id="event-record-label">准入边界 · 选取字段示意</span><span class="mono">JSON</span></div><pre tabindex="0" aria-label="事件记录示意"><code id="event-code">{
+  "application": "example-app",
+  "workspace": "workspace-a",
+  "idempotency": "key + content fingerprint",
+  "payer": "initiating user"
+}</code></pre></div><div class="event-bottom"><p id="event-note">共享定义不会混合应用身份、工作空间或余额。</p><div class="event-controls" data-enhance hidden><button type="button" id="event-prev" aria-label="上一个事件" disabled>←</button><button type="button" id="event-next">下一事件 <span aria-hidden="true">→</span></button></div></div></div></div>
+      <div class="lab-footer"><span class="mono" id="lab-position">01 — 06</span><p>外部请求不保证恰好一次；恢复以已保存回执为依据。</p><a href="/docs/teams/">执行团队设计 ↗</a></div>
+    </div>
+    <noscript><p class="no-script">正常执行依次校验准入、冻结快照、启动 Crew、检查调用授权与预算、登记产物并独立审校。返工创建新产物并重新审校；未知外部结果先核对真实回执，不自动重发。启用 JavaScript 可逐事件探索。</p></noscript>
+  </section>
+
+  <section class="governance-section" id="governance" aria-labelledby="governance-title"><div class="wrap">
+    <div class="governance-header"><p class="eyebrow">04 / INVARIANTS, NOT INTENTIONS</p><h2 id="governance-title">把约束放进运行时。</h2><p>提示词表达目标。身份、资金和交付状态由服务端规则维护。</p></div>
+    <div class="invariant-row"><span class="invariant-number">01</span><div><span class="mono">ACTION SCOPE</span><h3>每次行动重新授权。</h3></div><p>模型支持搜索，不代表每个岗位都能搜索。当前角色能力、授权范围、期限、预算和停止标志在实际调用前复查。</p><code>role ∩ mandate ∩ limits</code></div>
+    <div class="invariant-row"><span class="invariant-number">02</span><div><span class="mono">ACCEPTANCE IDENTITY</span><h3>验收属于具体产物。</h3></div><p>契约校验、专业审校与最终接受分开。验收绑定产物、哈希与执行代次；返工生成新产物并获得对应的新验收。</p><code>artifact + hash + generation</code></div>
+    <div class="invariant-row"><span class="invariant-number">03</span><div><span class="mono">DURABLE EFFECTS</span><h3>费用与恢复尊重回执。</h3></div><p>先预留，按实际用量结算；未知用量保留未知。重启先恢复回执与结算，明确重试继续使用原付款人和生命周期边界。</p><code>reserve → receipt → settle</code></div>
+    <div class="governance-bottom"><p>确定性规则检查已声明的结构与一致性。专业内容质量仍需独立评估；严格业务要求应进入可验证的契约。</p><a class="arrow-link" href="/docs/contracts/">可复现的机制验证 <span aria-hidden="true">↗</span></a></div>
+  </div></section>
+
+  <section class="section wrap deployment-section" id="deployment" aria-labelledby="deployment-title"><div class="section-head"><div><p class="eyebrow">05 / THE PERSISTENCE MODEL</p><h2 id="deployment-title">单主进程。<br>持久事实在框架之外。</h2></div><p class="section-intro">Orchpact 以可自托管服务运行。Python wheel 是安装载体，HTTP 与声明格式是集成边界；Agent 内存不承担恢复与账务真相。</p></div>
+    <div class="storage-layout"><figure class="storage-diagram"><div class="storage-owner"><span class="mono">ONE DATABASE OWNER</span><strong>Orchpact 主进程</strong><small>调度线程 · 事务内领取 · 独占锁</small></div><div class="storage-fork" aria-hidden="true"><span></span><b>↓</b><b>↓</b></div><div class="storage-stores"><div><span class="store-icon" aria-hidden="true">▤</span><h3>PostgreSQL</h3><p>工作流 / 状态 / 账务 / 事件</p><code>transaction + advisory lock</code></div><div><span class="store-icon" aria-hidden="true">⌑</span><h3>配套私有文件</h3><p>产物 / 原始回执 / 执行记录</p><code>immutable files + fsync</code></div></div><figcaption><span aria-hidden="true">↔</span> 数据库与文件实例标识配对，备份与恢复成对进行。</figcaption></figure>
+      <div class="runtime-spec"><h3>当前实现边界</h3><dl><div><dt>部署</dt><dd>单机、单主进程的模块化单体</dd></div><div><dt>团队</dt><dd>CrewAI sequential；岗位选择与顺序由声明确定</dd></div><div><dt>受控工具</dt><dd><code>search_evidence</code> / <code>read_artifact</code></dd></div><div><dt>默认 attempt 限制</dt><dd>12 次模型决策 · 8 次工具步骤<br>300 秒 · 128000 字符历史</dd></div><div><dt>持久化</dt><dd>PostgreSQL + 配套文件目录；同一数据库仅一个 owner</dd></div></dl><p>同一 attempt 内所有成员与辅助 Crew 共享额度。JSON 修正产生的实际请求分别计费。当前不提供远程 Worker、多主调度或任意生成代码执行。</p><a class="arrow-link" href="/docs/architecture/">实现细节与存储语义 <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </section>
+
+  <section class="getting-started" id="start" aria-labelledby="start-title"><div class="wrap start-layout"><div><p class="eyebrow">BUILD WITH ORCHPACT</p><h2 id="start-title">从一个定义开始，<br>把协作运行起来。</h2><p>先读团队协作示例，再启动自己的实例。<br>为能力槽位绑定模型，为执行账号配置额度。</p><div class="start-actions"><a class="button button-light" href="/docs/quickstart/">阅读快速开始 <span aria-hidden="true">↗</span></a><a class="start-doc-link" href="/docs/teams/">团队声明与执行实例 →</a></div></div><div class="start-terminal"><div><span class="mono">LOCAL / DOCKER COMPOSE</span><button class="copy-small" type="button" data-copy="start-command" data-enhance hidden>复制命令 <span aria-hidden="true">⧉</span></button></div><pre tabindex="0" aria-label="源码构建并启动本地 Docker 实例的命令"><code id="start-command">git clone https://github.com/orchpact/orchpact.git
+cd orchpact
+python3 docker/configure.py
+docker compose --env-file docker/.env up -d --build --wait</code></pre><p>从源码构建 · 新实例默认尚未配置模型与执行额度</p></div></div></section>
+</main>
+<footer class="site-footer wrap"><div><a class="brand" href="/"><img src="/assets/orchpact-logo.svg" width="145" height="34" alt="Orchpact"></a><p>声明协作，按约交付。</p></div><nav aria-label="页脚导航"><a href="/docs/">文档</a><a href="https://github.com/orchpact/orchpact">源码 ↗</a><a href="/docs/contributing/">参与贡献</a><a href="/docs/security/">安全报告</a></nav><div class="footer-meta"><span class="mono">OPEN SOURCE / MIT</span><a href="#top">回到顶部 ↑</a></div></footer>
+<p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+</body>
+</html>

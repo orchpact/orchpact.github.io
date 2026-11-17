@@ -1,0 +1,116 @@
+[
+  {
+    "section": "开始使用",
+    "slug": "",
+    "title": "文档总览",
+    "file": "content/pages/index.md"
+  },
+  {
+    "section": "开始使用",
+    "slug": "quickstart",
+    "title": "快速开始",
+    "source": "docs/GETTING_STARTED.md"
+  },
+  {
+    "section": "开始使用",
+    "slug": "architecture",
+    "title": "架构与边界",
+    "source": "docs/ARCHITECTURE.md"
+  },
+  {
+    "section": "定义与执行",
+    "slug": "execution",
+    "title": "CrewAI 与 Orchpact 职责边界",
+    "source": "docs/EXECUTION_BOUNDARY.md"
+  },
+  {
+    "section": "定义与执行",
+    "slug": "teams",
+    "title": "执行团队与岗位",
+    "source": "docs/TEAM_EXECUTION.md"
+  },
+  {
+    "section": "定义与执行",
+    "slug": "workflows",
+    "title": "工作流、应用与安装",
+    "source": "docs/WORKFLOWS.md"
+  },
+  {
+    "section": "定义与执行",
+    "slug": "applications",
+    "title": "API 与应用接入",
+    "source": "docs/APPLICATIONS.md"
+  },
+  {
+    "section": "定义与执行",
+    "slug": "workspaces",
+    "title": "账号与 Workspace",
+    "source": "docs/WORKSPACES.md"
+  },
+  {
+    "section": "定义与执行",
+    "slug": "providers",
+    "title": "模型资源与定价",
+    "source": "docs/PROVIDERS.md"
+  },
+  {
+    "section": "定义与执行",
+    "slug": "console",
+    "title": "管理台",
+    "source": "docs/CONSOLE.md"
+  },
+  {
+    "section": "部署与维护",
+    "slug": "docker",
+    "title": "独立 Docker 运行",
+    "source": "docker/README.md"
+  },
+  {
+    "section": "部署与维护",
+    "slug": "postgresql",
+    "title": "PostgreSQL 与备份恢复",
+    "source": "docs/POSTGRESQL.md"
+  },
+  {
+    "section": "部署与维护",
+    "slug": "validation",
+    "title": "发行验证",
+    "source": "docs/RELEASE_VALIDATION.md"
+  },
+  {
+    "section": "接口与项目",
+    "slug": "contracts",
+    "title": "公开契约",
+    "source": "contracts/README.md"
+  },
+  {
+    "section": "接口与项目",
+    "slug": "compatibility",
+    "title": "公开接口与版本策略",
+    "source": "docs/COMPATIBILITY.md"
+  },
+  {
+    "section": "接口与项目",
+    "slug": "naming",
+    "title": "名称与接口标识",
+    "source": "docs/NAMING.md"
+  },
+  {
+    "section": "接口与项目",
+    "slug": "repositories",
+    "title": "仓库与文档维护",
+    "source": "docs/REPOSITORIES.md"
+  },
+  {
+    "section": "参与项目",
+    "slug": "contributing",
+    "title": "参与贡献",
+    "source": "CONTRIBUTING.md"
+  },
+  {
+    "section": "参与项目",
+    "slug": "security",
+    "title": "安全报告",
+    "source": "SECURITY.md"
+  }
+]

@@ -1,0 +1,97 @@
+{
+  "repository": "https://github.com/orchpact/orchpact",
+  "commit": "04e9a81dbcab16b47c89554258ad024f36772fec",
+  "committed_at": "2026-11-17T20:40:53+08:00",
+  "documents": [
+    {
+      "source": "docs/GETTING_STARTED.md",
+      "file": "content/reference/quickstart.md",
+      "sha256": "13a4f185bb538debeb5fd1b83116dafc7d50d4b27cc0f8e2ecc6b97b122b065b"
+    },
+    {
+      "source": "docs/ARCHITECTURE.md",
+      "file": "content/reference/architecture.md",
+      "sha256": "7d958d346b50ddc9a72e2e6130d47f9d1642326c21835dd18adbd044572d1488"
+    },
+    {
+      "source": "docs/EXECUTION_BOUNDARY.md",
+      "file": "content/reference/execution.md",
+      "sha256": "3946955995d5a1afff1e89318fd70d6a3145332eb3fcdd8b4ad8df62f7dd6e8f"
+    },
+    {
+      "source": "docs/TEAM_EXECUTION.md",
+      "file": "content/reference/teams.md",
+      "sha256": "ffbf447341270bfae2c44dba7198c7b6c8dddaf5fbb6e7bae3868dcb0fe7550e"
+    },
+    {
+      "source": "docs/WORKFLOWS.md",
+      "file": "content/reference/workflows.md",
+      "sha256": "bf7071da4d16e12246c8c4bca6a88145f48e12b7cc7b49d7cf186e4fe325d546"
+    },
+    {
+      "source": "docs/APPLICATIONS.md",
+      "file": "content/reference/applications.md",
+      "sha256": "6d5cc9e33ca7dcc46fbdf5b0156c10279c1174c922427880435a95b6b026171a"
+    },
+    {
+      "source": "docs/WORKSPACES.md",
+      "file": "content/reference/workspaces.md",
+      "sha256": "a51a832dd6b283b5c11fd7027604adbba4684de8e2f706f8cf01f2a36aaa6cbd"
+    },
+    {
+      "source": "docs/PROVIDERS.md",
+      "file": "content/reference/providers.md",
+      "sha256": "c29bdade29a04f973beb6bf0614fd7812e01a07fe0e9d6890aac7393d7d41465"
+    },
+    {
+      "source": "docs/CONSOLE.md",
+      "file": "content/reference/console.md",
+      "sha256": "bba7e8fae608270a512597bb0427c7c9c6e5dc4ea91b6033198f59362200a6f4"
+    },
+    {
+      "source": "docker/README.md",
+      "file": "content/reference/docker.md",
+      "sha256": "eaaaa2c17b7b2a948b6dce34d6404082acb789f0b569998dbca2ffdd63cbbee7"
+    },
+    {
+      "source": "docs/POSTGRESQL.md",
+      "file": "content/reference/postgresql.md",
+      "sha256": "c2747e34418cdb4902bca476a099041a2e32b32f6dc23f44401ed24d75180ee2"
+    },
+    {
+      "source": "docs/RELEASE_VALIDATION.md",
+      "file": "content/reference/validation.md",
+      "sha256": "3aad8748c16024e9eda361d1d54b9ec9e124594113e6565b7dfaccf3f51dabe0"
+    },
+    {
+      "source": "contracts/README.md",
+      "file": "content/reference/contracts.md",
+      "sha256": "05e3d72242a2e92b139865fdef0257f6ee3ed977d575e41195093072f94bd80c"
+    },
+    {
+      "source": "docs/COMPATIBILITY.md",
+      "file": "content/reference/compatibility.md",
+      "sha256": "d9462a671de5e4538d0f96f24af3c68b5cdb3be27102d184fd7add2d86356e6e"
+    },
+    {
+      "source": "docs/NAMING.md",
+      "file": "content/reference/naming.md",
+      "sha256": "b0cbaa01f0f767d5d62125ef28bc2f7c871ce74f521362c1f48e97d4344e061e"
+    },
+    {
+      "source": "docs/REPOSITORIES.md",
+      "file": "content/reference/repositories.md",
+      "sha256": "304e732d96c8b819b91d5b66d7259bd5da4c35d22505f71c727af43feda1b7a8"
+    },
+    {
+      "source": "CONTRIBUTING.md",
+      "file": "content/reference/contributing.md",
+      "sha256": "f3bc207e8a0ac3caab0e312a8a2e00b811ebc283fbd8c754fb21a79f3b481cf7"
+    },
+    {
+      "source": "SECURITY.md",
+      "file": "content/reference/security.md",
+      "sha256": "3b56ccba9be3e2d161c370142ff928c812c6f903bebdb072e123463eb46e49a0"
+    }
+  ]
+}
