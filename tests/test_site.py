@@ -29,4 +29,14 @@ class SiteTests(unittest.TestCase):
         self.assertEqual(errors,[])
         self.assertGreaterEqual(counts['html_pages'],19)
 
+    def test_mermaid_pages_load_local_renderer_and_preserve_source(self):
+        for slug in ('architecture', 'execution'):
+            html=(ROOT/'dist/docs'/slug/'index.html').read_text()
+            self.assertIn('class="language-mermaid"',html)
+            scripts=('/assets/docs.js','/assets/vendor/mermaid/mermaid.min.js','/assets/diagrams.js')
+            self.assertEqual([html.index('src="'+url+'"') for url in scripts],sorted(html.index('src="'+url+'"') for url in scripts))
+            for url in scripts:self.assertIn('src="'+url+'" defer',html)
+        for path in ('index.html','docs/index.html'):
+            self.assertNotIn('/assets/vendor/mermaid/',(ROOT/'dist'/path).read_text())
+
 if __name__=='__main__':unittest.main()

@@ -8,6 +8,8 @@
 
 首页交互以原生按钮、键盘与渐进增强实现；禁用脚本仍保留架构、契约和恢复说明，手机导航使用原生 details。尊重减少动态效果设置。`tests/runtime.test.cjs` 检查演示中的验收身份、返工代次、未知结果预留与不重放语义，演示不是实际执行记录。
 
+文档中的 Mermaid 代码块在浏览器中渲染为流程图，采用与本站配色一致的 SVG，窄屏可在图内横向滚动。原始代码保留在“查看 Mermaid 源码”中，可展开复制；关闭 JavaScript 或渲染失败时仍显示源码。只有含图表的页面加载本地固定版本的 Mermaid，无 CDN 请求。资源版本、许可与更新步骤见 [THIRD_PARTY.md](THIRD_PARTY.md)。
+
 品牌图形使用两条相互咬合的流程轨道组成 O 形契环。`src/assets/orchpact-logo.svg` 为已转曲的横向字标，`src/assets/mark.svg` 为圆角方形 icon，`src/assets/orchpact-avatar.png` 为 1024×1024 头像；与主仓库公开品牌素材保持一致，不依赖远程字体或相邻目录。
 
 ## 本地构建
@@ -62,4 +64,4 @@ PR 只运行构建和检查，不执行发布；部署权限仅在部署 job 中
 
 ## 许可证与安全
 
-本站采用 [MIT](LICENSE)。Python-Markdown 是独立的构建依赖，遵循其上游 BSD-3-Clause 许可；它不作为浏览器运行时发送。不要把其他站点的 .openai 托管身份、凭据、用户内容或运行目录迁入此仓库。漏洞报告见 [SECURITY.md](SECURITY.md)。
+本站采用 [MIT](LICENSE)。第三方许可见 [THIRD_PARTY.md](THIRD_PARTY.md)。不要把其他站点的 .openai 托管身份、凭据、用户内容或运行目录迁入此仓库。漏洞报告见 [SECURITY.md](SECURITY.md)。

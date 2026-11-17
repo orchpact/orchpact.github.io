@@ -57,6 +57,12 @@ def validate(directory):
 
 def check():
     errors, counts = validate(ROOT / 'dist')
+    vendor = ROOT / 'src/assets/vendor/mermaid'
+    provenance = json.loads((vendor / 'provenance.json').read_text())
+    for name, digest in provenance['files'].items():
+        for folder in (vendor, ROOT / 'dist/assets/vendor/mermaid'):
+            if hashlib.sha256((folder / name).read_bytes()).hexdigest() != digest:
+                errors.append('Mermaid distribution hash mismatch: ' + str(folder / name))
     manifest = json.loads((ROOT / 'source-docs.json').read_text())
     for row in manifest['documents']:
         if hashlib.sha256((ROOT / row['file']).read_bytes()).hexdigest() != row['sha256']:

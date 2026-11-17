@@ -76,8 +76,11 @@ def render_page(page, pages, index, body, toc, provenance):
     previous = pages[index - 1] if index else None
     following = pages[index + 1] if index + 1 < len(pages) else None
     pagination = ''.join('<a class="' + direction + '" href="' + route(p['slug']) + '"><small>' + label + '</small><strong>' + escape(p['title']) + ' ' + arrow + '</strong></a>' for p, direction, label, arrow in [(previous, 'previous', '上一篇', '←'), (following, 'next', '下一篇', '→')] if p)
+    diagram_scripts = ''
+    if re.search(r'<code\b[^>]*\bclass="[^"]*\blanguage-mermaid\b', body):
+        diagram_scripts = '<script src="/assets/vendor/mermaid/mermaid.min.js" defer></script><script src="/assets/diagrams.js" defer></script>'
     return f'''<!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="{title} · Orchpact（序契）使用文档。了解可复用工作流、应用接入与自托管运行边界。"><title>{title} · Orchpact 文档</title><link rel="canonical" href="{SITE['url']}{path}"><link rel="icon" href="/assets/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/docs.css"><script src="/assets/docs.js" defer></script></head>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="{title} · Orchpact（序契）使用文档。了解可复用工作流、应用接入与自托管运行边界。"><title>{title} · Orchpact 文档</title><link rel="canonical" href="{SITE['url']}{path}"><link rel="icon" href="/assets/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/docs.css"><script src="/assets/docs.js" defer></script>{diagram_scripts}</head>
 <body class="docs-page"><a class="skip-link" href="#main">跳到正文</a>
 <header class="docs-header"><a class="brand" href="/" aria-label="Orchpact 首页"><img src="/assets/orchpact-logo.svg" alt="Orchpact" width="145" height="34"></a><nav aria-label="全站导航"><a href="/">项目介绍</a><a href="/docs/" aria-current="true">文档</a><a href="https://github.com/orchpact/orchpact">GitHub ↗</a></nav><button class="search-toggle" data-search hidden>搜索文档 <kbd>/</kbd></button></header>
 <details class="mobile-directory"><summary>文档目录 <span>＋</span></summary><nav aria-label="手机文档导航">{navigation}</nav></details>
